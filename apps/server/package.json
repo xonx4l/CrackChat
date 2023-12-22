@@ -1,5 +1,10 @@
 {
     "name": "server",
     "version": "1.0.0",
-    "private": true
+    "private": true,
+    "dependencies": {
+        "server": "^1.0.0",
+        "tsc-watch": "^6.0.4",
+        "typescript": "^5.3.3"
+    }
 }
