@@ -22,6 +22,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "server": "^1.0.38"
+    "server": "^1.0.38",
+    "typescript": "^5.3.3"
   }
 }
