@@ -2,6 +2,11 @@
     "name": "server",
     "version": "1.0.0",
     "private": true,
+    "scripts": {
+        "start":"node dist/index",
+        "build":"tsc -p .",
+        "dev":"tsc-watch --inSuccess \"node dist/index.js\" "
+    },
     "dependencies": {
         "server": "^1.0.0",
         "tsc-watch": "^6.0.4",
