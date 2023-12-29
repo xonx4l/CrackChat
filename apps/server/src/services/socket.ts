@@ -8,14 +8,17 @@ class SocketService {
     }
 
     public initLiteners() {
+        console.log("Init Socket Listeners...");
         const io = this.io;
-       io.on("connect", (socket) => {
-        console.log(`New socket Connected`, socket.id);
+        io.on("connect", (socket) => {
+            console.log(`New socket Connected`, socket.id);
 
-        socket.on('event:message', async({message}: {message:string}) => {})
-         console.log("New Message Rec.", message);
-      });
-     
+            socket.on('event:message', async ({ message }: { message: string }) => {
+                console.log("New Message Rec.", message);
+            })
+
+        });
+
     }
 
     get io() {
