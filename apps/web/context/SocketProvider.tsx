@@ -5,12 +5,19 @@ interface SocketProviderProps {
     children?: React.ReactNode
 }
 
-const SocketContext = React.createContext(null);
-
-export const SocketProvider: React.FC = () => {
-    return (
-        <SocketContext.Provider>
-            {}
-        </SocketContext.Provider>
-    )
+interface IsocketContext {
+    sendMessage: (msg: string)=> any;
 }
+
+const SocketContext = React.createContext<ISocketContext| null>(null);
+
+export const SocketProvider: React.FC<SocketProviderProps> = ({children}) => {
+
+    const sendMessage:ISocketContext['sendMessage'] =useCallback((msg) => {})
+         console.log("Send Message", msg);
+    return (
+        <SocketContext.Provider value ={null}>
+            {children}
+        </SocketContext.Provider>
+    );
+};
